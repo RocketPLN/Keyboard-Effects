@@ -1,4 +1,4 @@
 import { env } from "bun";
 
-export const soundpacksPath = `${env.USERPROFILE}/Desktop/soundpacks`;
-export const configPath = `${env.USERPROFILE}/Desktop/config.json`;
+export const soundpacksPath = `${env.APPDATA}/keyboard-effects/soundpacks`;
+export const configPath = `${env.APPDATA}/keyboard-effects/config.json`;

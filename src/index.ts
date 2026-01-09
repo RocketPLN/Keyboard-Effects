@@ -5,7 +5,9 @@ import { playAudioSegment } from "./lib/audioPlayer";
 import { getConfig, setConfig } from "./lib/config";
 import { getSoundpacks, transformFileName } from "./lib/getSoundpacks";
 
+
 async function run() {
+	await getSoundpacks();
 	const config = await getConfig();
 
 	if (!config) {
@@ -43,6 +45,11 @@ async function run() {
 
 async function selectSoundpack(volume?: Config["volume"]) {
 	const soundpacks = await getSoundpacks();
+
+	if (!soundpacks.names.length) {
+		console.log("No soundpacks found");
+		return;
+	}
 
 	const answer = await select({
 		message: "Select a soundpack",
@@ -109,6 +116,7 @@ async function settings() {
 		await selectVolume(config.soundpack);
 	}
 }
+
 
 switch (process.argv.at(-1)) {
 	case "settings":

@@ -4,6 +4,9 @@ await build({
     entrypoints: ["./src/index.ts", "./src/bin/ffplay.exe"],
     compile: {
         outfile: "./keyboardsounds",
-        target: "bun-windows-x64"
+        target: "bun-windows-x64",
+        windows: {
+            hideConsole: true
+        }
     }
 })
