@@ -16,6 +16,16 @@ A cross-platform tool that plays custom keyboard sounds on keypress.
 
 ## Getting Started
 
+### Build from source
+
+To build you need to have [Bun](https://bun.sh) installed.
+You need to put the FFplay binary in the `bin/` directory.
+Then run:
+
+```bash
+bun run build
+```
+
 ### Install dependencies
 
 ```bash

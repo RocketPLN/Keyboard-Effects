@@ -6,8 +6,8 @@ out
 dist
 *.tgz
 
-##
-*.exe
+## binary files
+src/bin/*
 
 # code coverage
 coverage
